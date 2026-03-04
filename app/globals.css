@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0f1a35;
+  --navy-lt: #1a2a4a;
+  --gold: #c9a84c;
+  --gold-dk: #a8893e;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #fff;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── Keyframes ──────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes shimmerGold {
+  from { background-position: -200% center; }
+  to   { background-position:  200% center; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulseRing {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(1.75); opacity: 0; }
+}
+@keyframes waBounce {
+  0%, 80%, 100% { transform: translateY(0) scale(1); }
+  40%            { transform: translateY(-8px) scale(1.08); }
+  60%            { transform: translateY(-3px) scale(1.04); }
+}
+@keyframes slideDrawer {
+  from { transform: translateX(110%); }
+  to   { transform: translateX(0); }
+}
+@keyframes dotPop {
+  0%   { transform: scale(0); opacity: 0; }
+  65%  { transform: scale(1.25); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes lineGrow {
+  from { transform: scaleY(0); transform-origin: top; }
+  to   { transform: scaleY(1); transform-origin: top; }
+}
+@keyframes numberCount {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Scroll-reveal system ───────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.is-visible        { opacity: 1; transform: none; }
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-left.is-visible   { opacity: 1; transform: none; }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1),
+              transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-right.is-visible  { opacity: 1; transform: none; }
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.65s cubic-bezier(0.22,1,0.36,1),
+              transform 0.65s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal-scale.is-visible  { opacity: 1; transform: none; }
+
+/* ── Page-load animation helpers (hero only) ────────────────────────── */
+.anim-up    { animation: fadeUp    0.65s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-left  { animation: fadeLeft  0.65s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-right { animation: fadeRight 0.65s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-scale { animation: scaleIn   0.55s cubic-bezier(0.22,1,0.36,1) both; }
+.anim-float { animation: floatY 3.5s ease-in-out infinite; }
+
+.d1 { animation-delay: 0.08s; }
+.d2 { animation-delay: 0.18s; }
+.d3 { animation-delay: 0.28s; }
+.d4 { animation-delay: 0.38s; }
+.d5 { animation-delay: 0.48s; }
+.d6 { animation-delay: 0.58s; }
+
+/* ── Design tokens ──────────────────────────────────────────────────── */
+.section-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+}
+
+/* Gold shimmer — DM Sans (NOT italic playfair) */
+.shimmer-gold {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  background: linear-gradient(90deg, #c9a84c 0%, #f5e090 40%, #c9a84c 70%, #a8893e 100%);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerGold 3s linear infinite;
+}
+
+.card-lift {
+  transition: transform 0.25s cubic-bezier(0.22,1,0.36,1),
+              box-shadow 0.25s cubic-bezier(0.22,1,0.36,1);
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 48px rgba(15,26,53,0.12);
+}
+
+.faq-row {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1.15rem 0;
+}
+
+.ph {
+  background: linear-gradient(135deg, #1a2a4a 0%, #243d68 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a5568;
+  font-size: 0.75rem;
+}
+
+/* ── Stats numbers — DM Sans, not Playfair ──────────────────────────── */
+.stat-num {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #0f1a35;
+  animation: numberCount 0.7s cubic-bezier(0.22,1,0.36,1) both;
+}
+
+/* ── Logo L letter ──────────────────────────────────────────────────── */
+.logo-mark {
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  background: linear-gradient(145deg, #0f1a35 0%, #1e3260 100%);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden; flex-shrink: 0;
+  border: 1px solid rgba(201,168,76,0.3);
+  box-shadow: 0 2px 14px rgba(201,168,76,0.15), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.logo-mark::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: conic-gradient(transparent 0deg, rgba(201,168,76,0.1) 90deg, transparent 180deg);
+  animation: spin 7s linear infinite;
+}
+.logo-mark span {
+  font-family: "Playfair Display", serif;
+  font-size: 19px; font-weight: 700;
+  color: #c9a84c;
+  position: relative; z-index: 1;
+  line-height: 1;
+}
+
+/* ── WhatsApp button ────────────────────────────────────────────────── */
+.wa-wrap { position: fixed; bottom: 24px; right: 24px; z-index: 999; }
+.wa-btn {
+  width: 58px; height: 58px; border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; position: relative;
+  animation: waBounce 4s ease-in-out 3s infinite;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.wa-btn:hover { transform: scale(1.12); box-shadow: 0 12px 40px rgba(37,211,102,0.55); }
+.wa-ring {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: rgba(37,211,102,0.35);
+  animation: pulseRing 2.2s cubic-bezier(0.24,0,0.38,1) infinite;
+}
+.wa-ring2 {
+  position: absolute; inset: 0; border-radius: 50%;
+  background: rgba(37,211,102,0.2);
+  animation: pulseRing 2.2s cubic-bezier(0.24,0,0.38,1) 0.6s infinite;
+}
+
+/* ── Step timeline ──────────────────────────────────────────────────── */
+.step-line {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.9s cubic-bezier(0.22,1,0.36,1) 0.3s;
+}
+.step-line.is-visible { transform: scaleY(1); }
+
+/* ── Mobile drawer ──────────────────────────────────────────────────── */
+.drawer-anim { animation: slideDrawer 0.32s cubic-bezier(0.22,1,0.36,1) both; }
+
+/* ── Step circle pulse animation ───────────────────────────────────── */
+@keyframes stepPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(201,168,76,0.5); }
+  60%  { box-shadow: 0 0 0 10px rgba(201,168,76,0); }
+  100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+}
+.step-dot-active {
+  animation: stepPulse 1.8s ease-out infinite;
+}
