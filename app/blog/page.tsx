@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Clock, Home, Calendar, X, ChevronRight } from "lucide-react";
 
+import { getAssetPath } from "@/lib/utils";
+
 const fullContent: Record<number, string[]> = {
   1: [
   "Filing your Income Tax Return (ITR) is not just a legal requirement but also an important financial responsibility that protects you from penalties and strengthens your financial credibility. A properly filed ITR is essential when applying for loans, visas, government tenders, or claiming tax refunds.",
@@ -103,7 +105,7 @@ const fullContent: Record<number, string[]> = {
 
 const featuredArticle = {
   id: 1,
-  image: "/images/blog/article-1.png",
+  image: getAssetPath("/images/blog/article-1.png"),
   category: "GST & Tax",
   catColor: "#ea580c",
   catBg: "#fff7ed",
@@ -120,7 +122,7 @@ const featuredArticle = {
 const regularArticles = [
   {
     id: 2,
-    image: "/images/blog/article-2.png",
+    image: getAssetPath("/images/blog/article-2.png"),
     category: "GST & Tax",
     catColor: "#ea580c",
     catBg: "#fff7ed",
@@ -135,7 +137,7 @@ const regularArticles = [
   },
   {
     id: 3,
-    image: "/images/blog/article-3.png",
+    image: getAssetPath("/images/blog/article-3.png"),
     category: "Company Law",
     catColor: "#0f1a35",
     catBg: "#f1f5f9",
@@ -150,7 +152,7 @@ const regularArticles = [
   },
   {
     id: 4,
-    image: "/images/blog/article-4.png",
+    image: getAssetPath("/images/blog/article-4.png"),
     category: "Startup Guide",
     catColor: "#0ea5e9",
     catBg: "#f0f9ff",
@@ -165,7 +167,7 @@ const regularArticles = [
   },
   {
     id: 5,
-    image: "/images/blog/article-5.png",
+    image: getAssetPath("/images/blog/article-5.png"),
     category: "Company Law",
     catColor: "#0f1a35",
     catBg: "#f1f5f9",
@@ -180,7 +182,7 @@ const regularArticles = [
   },
   {
     id: 6,
-    image: "/images/blog/article-6.png",
+    image: getAssetPath("/images/blog/article-6.png"),
     category: "GST & Tax",
     catColor: "#ea580c",
     catBg: "#fff7ed",
@@ -195,7 +197,7 @@ const regularArticles = [
   },
   {
     id: 7,
-    image: "/images/blog/article-7.png",
+    image: getAssetPath("/images/blog/article-7.png"),
     category: "GST & Tax",
     catColor: "#ea580c",
     catBg: "#fff7ed",
