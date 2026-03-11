@@ -341,7 +341,7 @@ export default function ProcessSection() {
             <div className="group relative rounded-2xl overflow-hidden w-full aspect-video transition-all duration-500 hover:shadow-[0_32px_64px_rgba(201,168,76,0.15)] hover:-translate-y-2"
               style={{ border: "2px solid rgba(255,255,255,0.07)" }}>
               <Image
-                src={getAssetPath("/images/manoj.png")}
+                src={getAssetPath("/manoj.webp")}
                 alt="Legalsri Founder"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

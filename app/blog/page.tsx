@@ -105,7 +105,7 @@ const fullContent: Record<number, string[]> = {
 
 const featuredArticle = {
   id: 1,
-  image: getAssetPath("/images/blog/article-1.png"),
+  image: getAssetPath("/images/blog/article-1.webp"),
   category: "GST & Tax",
   catColor: "#ea580c",
   catBg: "#fff7ed",
@@ -122,7 +122,7 @@ const featuredArticle = {
 const regularArticles = [
   {
     id: 2,
-    image: getAssetPath("/images/blog/article-2.png"),
+    image: getAssetPath("/images/blog/article-2.webp"),
     category: "GST & Tax",
     catColor: "#ea580c",
     catBg: "#fff7ed",
@@ -137,7 +137,7 @@ const regularArticles = [
   },
   {
     id: 3,
-    image: getAssetPath("/images/blog/article-3.png"),
+    image: getAssetPath("/images/blog/article-3.webp"),
     category: "Company Law",
     catColor: "#0f1a35",
     catBg: "#f1f5f9",
@@ -152,7 +152,7 @@ const regularArticles = [
   },
   {
     id: 4,
-    image: getAssetPath("/images/blog/article-4.png"),
+    image: getAssetPath("/images/blog/article-4.webp"),
     category: "Startup Guide",
     catColor: "#0ea5e9",
     catBg: "#f0f9ff",
@@ -167,7 +167,7 @@ const regularArticles = [
   },
   {
     id: 5,
-    image: getAssetPath("/images/blog/article-5.png"),
+    image: getAssetPath("/images/blog/article-5.webp"),
     category: "Company Law",
     catColor: "#0f1a35",
     catBg: "#f1f5f9",
@@ -182,7 +182,7 @@ const regularArticles = [
   },
   {
     id: 6,
-    image: getAssetPath("/images/blog/article-6.png"),
+    image: getAssetPath("/images/blog/article-6.webp"),
     category: "GST & Tax",
     catColor: "#ea580c",
     catBg: "#fff7ed",
@@ -197,7 +197,7 @@ const regularArticles = [
   },
   {
     id: 7,
-    image: getAssetPath("/images/blog/article-7.png"),
+    image: getAssetPath("/images/blog/article-7.webp"),
     category: "GST & Tax",
     catColor: "#ea580c",
     catBg: "#fff7ed",
