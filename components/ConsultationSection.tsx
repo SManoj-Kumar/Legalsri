@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 
 const serviceOptions = [
@@ -147,8 +148,8 @@ export default function ConsultationSection() {
                     </button>
                     <p className="text-xs text-center" style={{ color: "#9ca3af" }}>
                       By submitting, you agree to our{" "}
-                      <a href="/privacy" className="underline">Privacy Policy</a> and{" "}
-                      <a href="/terms" className="underline">Terms of Service</a>.
+                      <Link href="/privacy" className="underline">Privacy Policy</Link> and{" "}
+                      <Link href="/terms" className="underline">Terms of Service</Link>.
                     </p>
                   </form>
                 </>

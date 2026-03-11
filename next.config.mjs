@@ -5,6 +5,7 @@ const nextConfig = {
     domains: ["images.unsplash.com", "randomuser.me"],
     unoptimized: true,
   },
+  trailingSlash: true,
 };
 
 export default nextConfig;
