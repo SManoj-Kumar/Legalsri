@@ -8,28 +8,28 @@ const steps = [
     num: "01", icon: MessageSquare,
     color: "#c9a84c", lightBg: "#fffbeb", border: "#c9a84c50",
     title: "Initial Consultation",
-    desc: "Connect with our legal experts to discuss your business needs. We identify the right structure and provide a clear roadmap tailored to your goals.",
+    desc: "Connect with a legal expert to discuss your business needs. The expert will identify the right structure and provide a clear roadmap tailored to your goals.",
     side: "right", // card goes on RIGHT, dot in centre
   },
   {
     num: "02", icon: FileCheck,
     color: "#3b4dc8", lightBg: "#eef2ff", border: "#3b4dc850",
     title: "Document Collection",
-    desc: "Submit required documents through our secure digital portal. Our team verifies everything instantly and notifies you of any missing items.",
+    desc: "Documents are securely collected after consultation, ensuring complete privacy and confidentiality.",
     side: "left",  // card goes on LEFT
   },
   {
     num: "03", icon: Settings,
     color: "#16a34a", lightBg: "#f0fdf4", border: "#16a34a50",
     title: "Filing and Processing",
-    desc: "Our experts prepare and file your application with relevant government authorities, managing all correspondence and queries on your behalf.",
+    desc: "The expert prepares and files the application with the relevant authorities, handling all communication and queries on behalf of the client.",
     side: "right",
   },
   {
     num: "04", icon: Trophy,
     color: "#ea580c", lightBg: "#fff7ed", border: "#ea580c50",
     title: "Completion and Handover",
-    desc: "Receive certificates and compliance documents digitally. You are fully set up and ready to do business, with 12 months of ongoing support.",
+    desc: "Receive certificates and compliance documents digitally, with the expert providing support to ensure the business is fully set up and ready to operate.",
     side: "left",
   },
 ];
@@ -335,9 +335,15 @@ export default function ProcessSection() {
                 className="w-full aspect-video object-cover rounded-2xl"
                 style={{ border: "2px solid rgba(255,255,255,0.07)" }} />
             */}
-            <div className="rounded-2xl overflow-hidden w-full aspect-video ph"
+            <div className="group relative rounded-2xl overflow-hidden w-full aspect-video transition-all duration-500 hover:shadow-[0_32px_64px_rgba(201,168,76,0.15)] hover:-translate-y-2"
               style={{ border: "2px solid rgba(255,255,255,0.07)" }}>
-              <p style={{ color: "#4a5568" }}>[Add office / team photo here]</p>
+              <img 
+                src="/images/manoj.png" 
+                alt="Legalsri Founder"
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+              />
+              {/* Subtle overlay glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#c9a84c]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
             {/* Small floating review card removed per user request */}
           </div>

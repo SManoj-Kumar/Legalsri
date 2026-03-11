@@ -67,7 +67,7 @@ export default function Hero() {
               >
                 <span className="w-2 h-2 rounded-full" style={{ backgroundColor: "#c9a84c" }} />
                 <span className="text-xs font-semibold text-white tracking-widest uppercase">
-                  Trusted by 500+ Businesses
+                  Trusted by 100+ Businesses
                 </span>
               </div>
 

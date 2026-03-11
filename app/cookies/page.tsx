@@ -45,10 +45,6 @@ const sections = [
     title: "Changes to This Policy",
     content: "We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our business practices. We encourage you to review this page periodically. The date of the latest update is shown at the bottom of this page.",
   },
-  {
-    title: "Contact Us",
-    content: "If you have any questions about our use of cookies or this policy, please contact us at support@legalsri.com or call +91 98765 43210.",
-  },
 ];
 
 export default function CookiesPage() {
@@ -63,7 +59,7 @@ export default function CookiesPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3" style={{ fontFamily: "Playfair Display, serif" }}>
             Cookie Policy
           </h1>
-          <p className="text-sm" style={{ color: "#94a3b8" }}>Last updated: December 15, 2024</p>
+          <p className="text-sm" style={{ color: "#94a3b8" }}>Last updated: March 15, 2026</p>
         </div>
       </div>
 

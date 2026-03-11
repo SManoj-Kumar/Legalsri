@@ -4,10 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight, Plus, Minus } from "lucide-react";
 
 const testimonials = [
-  { quote: "Legalsri made our company incorporation incredibly smooth. Their team guided us through every step and handled all the paperwork with zero hassle. Strongly recommend for any startup.", name: "Rajesh Kumar", role: "Founder, TechSpace Pvt Ltd", initials: "RK", color: "#c9a84c" },
-  { quote: "We rely on Legalsri for all our GST filings and ROC compliance. Their timely reminders and expert advice have saved us from penalties multiple times. Best legal partner we have had.", name: "Anita Desai", role: "Director, Creative Hub", initials: "AD", color: "#3b4dc8" },
-  { quote: "Professional, knowledgeable, and always responsive. Getting our trademark registered was a breeze with their assistance. The team knows exactly what they are doing.", name: "Vikram Singh", role: "CEO, GreenVentures", initials: "VS", color: "#16a34a" },
-  { quote: "From DSC to Private Limited registration — Legalsri handled everything in record time. The digital process is seamless and their support team is available whenever I need help.", name: "Meera Patel", role: "Co-founder, FinTech Startup", initials: "MP", color: "#7c3aed" },
+  { quote: "Legalsri made my GST registration and monthly tax compliance completely hassle-free. Everything is filed on time and handled very professionally. A trusted partner for my business.", name: "Sputnik Electricals", initials: "SE", color: "#c9a84c" },
+  { quote: "Legalsri helped me set up our partnership firm and handled our GST and Income Tax services smoothly. The entire process was simple and well managed.", name: "M.R. Enterprises", initials: "MRE", color: "#16a34a" },
+  { quote: "Starting my sole proprietorship and managing GST and Income Tax became very easy with Legalsri. Everything was handled professionally.", name: "Sunil Kumar Patnaik", initials: "SKP", color: "#7c3aed" },
+  { quote: "Legalsri helped me register and incorporate my Private Limited company smoothly. The entire process and compliance filings were handled without any hassle.", name: "Hari Sankar Raju", initials: "HSR", color: "#7c3aed" },
+  { quote: "I registered my sole proprietorship through Legalsri, and the process was handled very professionally and efficiently.", name: "KGN Sales", initials: "KS", color: "#3b4dc8" },
+  { quote: "Managing my GST filings and Income Tax became very easy with Legalsri. The service is reliable and efficient.", name: "Tangudu Dileshwar Rao", initials: "TDR", color: "#7c3aed" },
 ];
 
 const faqs = [
@@ -27,13 +29,27 @@ export default function TestimonialsAndFaq() {
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -360, behavior: "smooth" });
+      const container = scrollContainerRef.current;
+      const isAtStart = container.scrollLeft <= 50;
+      if (isAtStart) {
+        container.scrollTo({ left: container.scrollWidth, behavior: "smooth" });
+      } else {
+        const cardWidth = container.querySelector(".group")?.clientWidth || 360;
+        container.scrollBy({ left: -(cardWidth + 24), behavior: "smooth" });
+      }
     }
   };
 
   const scrollRight = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 360, behavior: "smooth" });
+      const container = scrollContainerRef.current;
+      const isAtEnd = container.scrollLeft + container.offsetWidth >= container.scrollWidth - 60;
+      if (isAtEnd) {
+        container.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        const cardWidth = container.querySelector(".group")?.clientWidth || 360;
+        container.scrollBy({ left: cardWidth + 24, behavior: "smooth" });
+      }
     }
   };
 
@@ -102,7 +118,6 @@ export default function TestimonialsAndFaq() {
                   </div>
                   <div>
                     <p className="font-bold text-sm" style={{ color: "#0f1a35" }}>{t.name}</p>
-                    <p className="text-xs mt-0.5" style={{ color: "#9ca3af" }}>{t.role}</p>
                   </div>
                 </div>
               </div>

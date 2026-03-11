@@ -31,6 +31,21 @@ export default function ConsultationSection() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    
+    // Create WhatsApp message
+    const waNumber = "917008522175";
+    const message = `Hello Legalsri! I would like to request a free callback.
+    
+*Details:*
+- *Name:* ${name}
+- *Phone:* ${phone}
+- *Service:* ${service}`;
+    
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`;
+    
+    // Open WhatsApp in new tab
+    window.open(waUrl, "_blank");
+    
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
     setName(""); setPhone(""); setService("");

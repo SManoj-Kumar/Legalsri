@@ -1,7 +1,7 @@
 "use client";
 
 // WhatsApp number — replace with actual number
-const WA_NUMBER = "919876543210";
+const WA_NUMBER = "917008522175";
 const WA_MESSAGE = "Hello! I'd like to learn more about Legalsri's legal services.";
 
 export default function WhatsAppButton() {

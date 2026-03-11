@@ -65,16 +65,12 @@ const sections = [
   {
     title: "Changes to This Policy",
     content: "We may update this Privacy Policy periodically to reflect changes in our practices or applicable laws. We will notify you of material changes by posting the updated policy on our website with a revised date. We encourage you to review this policy regularly.",
-  },
-  {
-    title: "Contact Us",
-    content: "For privacy-related questions, concerns, or to exercise your data rights, please contact our Privacy Officer at privacy@legalsri.com or write to us at: Legalsri Legal Services Pvt. Ltd., 123 Business Park, Sector 62, Noida, UP 201301, India.",
-  },
+  }
 ];
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-16 pb-20">
       {/* Hero */}
       <div className="py-10 sm:py-14 px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #0f1a35 0%, #1a2a4a 100%)" }}>
         <div className="max-w-4xl mx-auto anim-up">
@@ -90,21 +86,6 @@ export default function PrivacyPage() {
 
       {/* Trust badges */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 anim-up">
-          {[
-            { icon: "🔒", title: "Data Encrypted",    sub: "SSL 256-bit encryption" },
-            { icon: "🛡️", title: "100% Confidential", sub: "We never sell your data" },
-            { icon: "✅", title: "GDPR Compliant",    sub: "Your rights respected" },
-          ].map((b) => (
-            <div key={b.title} className="flex items-center gap-3 rounded-xl p-4" style={{ backgroundColor: "#f8f9fb", border: "1px solid #e5e7eb" }}>
-              <span className="text-2xl">{b.icon}</span>
-              <div>
-                <p className="font-semibold text-sm" style={{ color: "#0f1a35" }}>{b.title}</p>
-                <p className="text-xs" style={{ color: "#6b7280" }}>{b.sub}</p>
-              </div>
-            </div>
-          ))}
-        </div>
 
         <p className="text-sm sm:text-base leading-relaxed mb-10" style={{ color: "#6b7280" }}>
           At Legalsri, we are committed to protecting your privacy and handling your personal information with the highest standards of care. This Privacy Policy explains how we collect, use, and protect your information when you use our services.

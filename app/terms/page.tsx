@@ -12,13 +12,7 @@ const sections = [
   },
   {
     title: "Services Provided",
-    content: "Legalsri provides online legal services including but not limited to company registration, GST registration and filing, trademark registration, ROC compliance, startup advisory, and legal document drafting. Our services are subject to availability and applicable laws of India.",
-    items: [
-      { name: "Company Registration",  desc: "Private Limited, LLP, OPC, and other business entity registrations." },
-      { name: "GST Services",           desc: "GST registration, monthly return filing, and compliance assistance." },
-      { name: "Trademark & IP",         desc: "Trademark search, registration filing, and intellectual property protection." },
-      { name: "ROC Compliance",         desc: "Annual return filing, director KYC, and statutory compliance services." },
-    ],
+    content: "Legalsri provides online legal and tax services including but not limited to company registration, LLP incorporation, GST registration and return filing, Income Tax filing, statutory compliance support, Digital Signature Certificate (DSC) services, and tax advisory. Our services are subject to availability and applicable laws and regulations of India.",
   },
   {
     title: "User Responsibilities",
@@ -52,15 +46,11 @@ const sections = [
     title: "Changes to Terms",
     content: "We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to our website. Your continued use of our services after any changes constitutes your acceptance of the updated terms.",
   },
-  {
-    title: "Contact Us",
-    content: "For questions, concerns, or disputes related to these Terms and Conditions, please contact us at support@legalsri.com or call +91 98765 43210. We aim to respond within 24 business hours.",
-  },
 ];
 
 export default function TermsPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-16 pb-20">
       {/* Hero */}
       <div className="py-10 sm:py-14 px-4 sm:px-6" style={{ background: "linear-gradient(135deg, #0f1a35 0%, #1a2a4a 100%)" }}>
         <div className="max-w-4xl mx-auto anim-up">
@@ -70,7 +60,7 @@ export default function TermsPage() {
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3" style={{ fontFamily: "Playfair Display, serif" }}>
             Terms &amp; Conditions
           </h1>
-          <p className="text-sm" style={{ color: "#94a3b8" }}>Last updated: December 15, 2024</p>
+          <p className="text-sm" style={{ color: "#94a3b8" }}>Last updated: March 15, 2026</p>
         </div>
       </div>
 
@@ -114,17 +104,6 @@ export default function TermsPage() {
                 <p className="text-sm sm:text-base leading-relaxed mb-4 pl-11" style={{ color: "#374151" }}>
                   {sec.content}
                 </p>
-              )}
-
-              {sec.items && (
-                <div className="pl-11 space-y-3">
-                  {sec.items.map((item) => (
-                    <div key={item.name} className="rounded-xl p-4" style={{ backgroundColor: "#f8f9fb", border: "1px solid #e5e7eb" }}>
-                      <p className="font-semibold text-sm mb-1" style={{ color: "#0f1a35" }}>{item.name}</p>
-                      <p className="text-sm leading-relaxed" style={{ color: "#6b7280" }}>{item.desc}</p>
-                    </div>
-                  ))}
-                </div>
               )}
             </section>
           ))}

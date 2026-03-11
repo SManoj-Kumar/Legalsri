@@ -85,15 +85,15 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex items-start gap-3">
               <MapPin size={15} className="mt-0.5 shrink-0" style={{ color: "#c9a84c" }} />
-              <span className="text-sm" style={{ color: "#9ca3af" }}>123, Business Park, Sector 62,<br />Noida, UP, India - 201301</span>
+              <span className="text-sm" style={{ color: "#9ca3af" }}>Ashok Nagar, Near B.ED College<br />Koraput, Odisha, India - 764020</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={15} className="shrink-0" style={{ color: "#c9a84c" }} />
-              <a href="tel:+919876543210" className="text-sm hover:text-white transition-colors" style={{ color: "#9ca3af" }}>+91 98765 43210</a>
+              <a href="tel:+919876543210" className="text-sm hover:text-white transition-colors" style={{ color: "#9ca3af" }}>+91 70085 22175</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={15} className="shrink-0" style={{ color: "#c9a84c" }} />
-              <a href="mailto:support@legalsri.com" className="text-sm hover:text-white transition-colors" style={{ color: "#9ca3af" }}>support@legalsri.com</a>
+              <a href="mailto:support@legalsri.com" className="text-sm hover:text-white transition-colors" style={{ color: "#9ca3af" }}>100.manoj@gmail.com</a>
             </li>
           </ul>
         </div>
