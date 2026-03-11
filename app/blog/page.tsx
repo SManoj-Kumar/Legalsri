@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Search, ArrowRight, Clock, Home, Calendar, X, ChevronRight } from "lucide-react";
 
@@ -389,13 +390,14 @@ export default function BlogPage() {
               onClick={() => setOpenArticle(featuredArticle)}
             >
               <div className="flex flex-col lg:flex-row">
-                {/* Image — left half on desktop, full width on mobile */}
-                <div className="w-full lg:w-[46%] overflow-hidden" style={{ minHeight: "220px", maxHeight: "340px" }}>
-                  <img
+                <div className="w-full lg:w-[46%] relative overflow-hidden" style={{ minHeight: "220px", maxHeight: "340px" }}>
+                  <Image
                     src={featuredArticle.image}
                     alt={featuredArticle.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ minHeight: "220px", objectPosition: "center top" }}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ objectPosition: "center top" }}
                   />
                 </div>
                 {/* Content */}
@@ -470,16 +472,13 @@ export default function BlogPage() {
                   onClick={() => setOpenArticle(a)}
                 >
                   {/* Image — 160px mobile, 200px desktop */}
-                  <div className="relative overflow-hidden">
-                    <img
+                  <div className="relative overflow-hidden w-full h-[200px] sm:h-[160px] lg:h-[200px]">
+                    <Image
                       src={a.image}
                       alt={a.title}
-                      className="w-full transition-transform duration-500 group-hover:scale-105"
-                      style={{
-                        height: "auto",
-                        objectFit: "contain",
-                        display: "block"
-                      }}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
                     />
                     <span
                       className="absolute top-2 left-2 px-2 py-0.5 rounded-full text-xs font-bold"

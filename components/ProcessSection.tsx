@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { Users, DollarSign, MessageSquare, FileCheck, Settings, Trophy, Shield } from "lucide-react";
 
 const steps = [
@@ -338,10 +339,12 @@ export default function ProcessSection() {
             */}
             <div className="group relative rounded-2xl overflow-hidden w-full aspect-video transition-all duration-500 hover:shadow-[0_32px_64px_rgba(201,168,76,0.15)] hover:-translate-y-2"
               style={{ border: "2px solid rgba(255,255,255,0.07)" }}>
-              <img 
+              <Image
                 src="/images/manoj.png" 
                 alt="Legalsri Founder"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover transition-transform duration-1000 group-hover:scale-110" 
               />
               {/* Subtle overlay glow on hover */}
               <div className="absolute inset-0 bg-gradient-to-tr from-[#c9a84c]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
