@@ -104,7 +104,7 @@ export default function TestimonialsAndFaq() {
                     className="text-sm sm:text-base leading-relaxed mb-8"
                     style={{ fontStyle: "italic", color: "#4b5563" }}
                   >
-                    "{t.quote}"
+                    &quot;{t.quote}&quot;
                   </p>
                 </div>
 
