@@ -28,10 +28,6 @@ npm run dev
 | `/cookies`        | Cookie Policy        |
 | `/*`              | 404 Not Found        |
 
-## 🌐 GitHub + Vercel Deployment
-
-See DEPLOY.md for step-by-step instructions.
-
 ## 🎨 Design Tokens
 
 - Navy: `#0f1a35` | Gold: `#c9a84c`
