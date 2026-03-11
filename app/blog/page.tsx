@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Search, ArrowRight, Clock, Home, Calendar, X, ChevronRight } from "lucide-react";
+import { Search, ArrowRight, Clock, Home, Calendar, X, ChevronRight, BookOpen } from "lucide-react";
 
 import { getAssetPath } from "@/lib/utils";
 
@@ -335,7 +335,7 @@ export default function BlogPage() {
         <div className="max-w-3xl mx-auto anim-up">
           <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold mb-4"
             style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#c9a84c", border: "1px solid rgba(201,168,76,0.2)" }}>
-            📚 INSIGHTS &amp; UPDATES
+            <BookOpen size={14} /> INSIGHTS &amp; UPDATES
           </span>
           <h1 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white mb-3"
             style={{ fontFamily: "Playfair Display, serif" }}>
